@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucca Gabriel Birello - Eletricista</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho com informações pessoais -->
+        <header class="header">
+            <div class="profile-header">
+                <div class="profile-info">
+                    <h1 class="nome">Lucca Gabriel Birello</h1>
+                    <h2 class="cargo">Eletricista | 17 anos</h2>
+                    <div class="contato">
+                        <p><i class="fas fa-envelope"></i> birelloluccagabriel@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> (11) 98765-4321</p>
+                        <p><i class="fas fa-map-marker-alt"></i> São Paulo, SP</p>
+                        <p><i class="fab fa-instagram"></i> @luccabirello</p>
+                        <p><i class="fab fa-linkedin"></i> /in/luccabirello</p>
+                        <p><i class="fab fa-github"></i> /luccabirello</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Botões de Ação Rápida no Header -->
+        <div class="action-buttons">
+            <button class="btn-action btn-whatsapp" onclick="window.open('https://wa.me/5511987654321?text=Olá%20Lucca,%20vi%20seu%20currículo%20e%20gostaria%20de%20conversar!', '_blank')">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </button>
+            <button class="btn-action btn-email" onclick="copiarEmail()">
+                <i class="fas fa-copy"></i> Copiar Email
+            </button>
+            <button class="btn-action btn-pdf" onclick="gerarPDF()">
+                <i class="fas fa-file-pdf"></i> Baixar PDF
+            </button>
+            <button class="btn-action btn-compartilhar" onclick="compartilhar()">
+                <i class="fas fa-share-alt"></i> Compartilhar
+            </button>
+        </div>
+
+        <!-- Resumo Profissional -->
+        <section class="resumo">
+            <h2><i class="fas fa-user"></i> Sobre Mim</h2>
+            <p>Jovem eletricista de 17 anos, dedicado e com grande vontade de aprender. Busco minha primeira oportunidade profissional na área elétrica para aplicar meus conhecimentos técnicos e desenvolver minhas habilidades. Possuo curso básico de eletricidade e disponibilidade para trabalho em período integral.</p>
+        </section>
+
+        <!-- Formação Acadêmica -->
+        <section class="formacao">
+            <h2><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h2>
+            <div class="form-item">
+                <h3>Ensino Médio</h3>
+                <p>Cursando - Previsão de conclusão: 2024</p>
+            </div>
+            <div class="form-item">
+                <h3>Curso de Eletricista Básico</h3>
+                <p>SENAI | 2023 - 2024</p>
+            </div>
+            <div class="form-item">
+                <h3>Curso de NR10 - Segurança em Instalações Elétricas</h3>
+                <p>SENAI | 2024</p>
+            </div>
+        </section>
+
+        <!-- Habilidades -->
+        <section class="habilidades">
+            <h2><i class="fas fa-bolt"></i> Habilidades Técnicas</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Elétrica</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag" onclick="mostrarDetalhe('Instalações elétricas residenciais e comerciais')">Instalações elétricas</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Circuitos simples e complexos')">Circuitos elétricos</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Disjuntores e quadro de distribuição')">Disjuntores</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Tomadas, interruptores e lustres')">Tomadas e interruptores</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Montagem e manutenção')">Quadros de distribuição</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Projetos de iluminação')">Iluminação</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Ferramentas</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag" onclick="mostrarDetalhe('Medição de tensão, corrente e resistência')">Multímetro</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Alicates de corte, pressão e universal')">Alicate</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Chaves philips e fenda')">Chave de fenda</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Furadeira e parafusadeira')">Furadeira</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Decapador de fios e cabos')">Decapador de fios</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-items">
+                        <span class="skill-tag" onclick="mostrarDetalhe('Sigo normas de segurança à risca')">Atenção aos detalhes</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Compromisso com prazos')">Responsabilidade</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Boa comunicação e cooperação')">Trabalho em equipe</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Sempre buscando novos conhecimentos')">Vontade de aprender</span>
+                        <span class="skill-tag" onclick="mostrarDetalhe('Iniciativa para resolver problemas')">Proatividade</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificações e Cursos -->
+        <section class="certificacoes">
+            <h2><i class="fas fa-certificate"></i> Certificações</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> NR10 - Segurança em Instalações e Serviços com Eletricidade (2024)</li>
+                <li><i class="fas fa-check-circle"></i> Curso de Eletricista Instalador - SENAI (40 horas) - 2023</li>
+                <li><i class="fas fa-check-circle"></i> Curso de Comandos Elétricos - SENAI (20 horas) - 2024</li>
+                <li><i class="fas fa-check-circle"></i> Informática Básica - Pacote Office (2023)</li>
+            </ul>
+        </section>
+
+        <!-- Projetos Pessoais -->
+        <section class="projetos">
+            <h2><i class="fas fa-tools"></i> Projetos Pessoais</h2>
+            <div class="projetos-grid">
+                <div class="projeto-card" onclick="verProjeto('Manutenção elétrica residencial')">
+                    <i class="fas fa-home"></i>
+                    <h4>Manutenção residencial</h4>
+                    <p>Clique para ver detalhes</p>
+                </div>
+                <div class="projeto-card" onclick="verProjeto('Montagem de quadro de distribuição')">
+                    <i class="fas fa-charging-station"></i>
+                    <h4>Quadro de distribuição</h4>
+                    <p>Clique para ver detalhes</p>
+                </div>
+                <div class="projeto-card" onclick="verProjeto('Instalação de lustres e ventiladores')">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Iluminação</h4>
+                    <p>Clique para ver detalhes</p>
+                </div>
+                <div class="projeto-card" onclick="verProjeto('Projeto de interruptores paralelos')">
+                    <i class="fas fa-toggle-on"></i>
+                    <h4>Interruptores</h4>
+                    <p>Clique para ver detalhes</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Informações Adicionais -->
+        <section class="info-adicional">
+            <h2><i class="fas fa-info-circle"></i> Informações Adicionais</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Disponibilidade:</strong> Imediata
+                </div>
+                <div class="info-item">
+                    <strong>Horário:</strong> Integral (manhã e tarde)
+                </div>
+                <div class="info-item">
+                    <strong>Transporte:</strong> Ônibus/Metrô
+                </div>
+                <div class="info-item">
+                    <strong>Interesses:</strong> Área industrial e residencial
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé com redes sociais -->
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://instagram.com/luccabirello" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com/in/luccabirello" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/luccabirello" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" onclick="compartilharWhatsApp()" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>© 2024 Lucca Gabriel Birello - Eletricista</p>
+        </footer>
+    </div>
+
+    <!-- Modal para detalhes -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-texto"></p>
+        </div>
+    </div>
+
+    <script>
+        // Funções de interação
+        
+        // Copiar email
+        function copiarEmail() {
+            const email = 'birelloluccagabriel@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('📧 Email copiado para a área de transferência!');
+            });
+        }
+        
+        // Gerar PDF (simulação)
+        function gerarPDF() {
+            alert('📄 Gerando PDF do currículo... (Em breve disponível)');
+        }
+        
+        // Compartilhar
+        function compartilhar() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Currículo - Lucca Gabriel Birello',
+                    text: 'Confira o currículo do Lucca, eletricista profissional!',
+                    url: window.location.href
+                });
+            } else {
+                alert('🔗 Link copiado! Compartilhe: ' + window.location.href);
+                navigator.clipboard.writeText(window.location.href);
+            }
+        }
+        
+        // Compartilhar WhatsApp
+        function compartilharWhatsApp() {
+            window.open('https://wa.me/?text=Confira%20o%20currículo%20do%20Lucca%20Birello%20-%20Eletricista%20' + window.location.href, '_blank');
+        }
+        
+        // Mostrar detalhe das habilidades
+        function mostrarDetalhe(detalhe) {
+            document.getElementById('modal-titulo').textContent = 'Detalhe da Habilidade';
+            document.getElementById('modal-texto').textContent = detalhe;
+            document.getElementById('modal').style.display = 'block';
+        }
+        
+        // Ver projeto
+        function verProjeto(projeto) {
+            document.getElementById('modal-titulo').textContent = projeto;
+            document.getElementById('modal-texto').textContent = 'Experiência prática em ' + projeto + '. Realizado durante cursos e projetos pessoais.';
+            document.getElementById('modal').style.display = 'block';
+        }
+        
+        // Fechar modal
+        function fecharModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+        
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('modal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+        
+        // Saudação personalizada
+        window.onload = function() {
+            const horas = new Date().getHours();
+            let saudacao;
+            
+            if (horas < 12) saudacao = 'Bom dia';
+            else if (horas < 18) saudacao = 'Boa tarde';
+            else saudacao = 'Boa noite';
+            
+            alert(`${saudacao}! Sou Lucca, eletricista. Como posso ajudar?`);
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
